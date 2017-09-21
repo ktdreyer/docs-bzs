@@ -8,6 +8,7 @@ team.
 * All BZs that have a customer case attached.
 
 TODO:
+-----
 
 * Find all BZs that remains known issues
 
@@ -16,6 +17,9 @@ TODO:
 * Automatically determine the Release Notes tracker bug
 
 * Automatically file a new Release Notes tracker bug if none can be found
+
+Usage:
+------
 
 To run this::
 
@@ -27,6 +31,9 @@ To run this::
 
   ./find.py
 
+Advanced usage:
+---------------
+
 You can also search for a specific targeted release::
 
   ./find.py 2.4
@@ -36,7 +43,10 @@ want to preview what is ``ON_QA``::
 
   ./find.py 2.4 ON_QA
 
-Sample output::
+Sample output
+-------------
+
+::
 
   RFEs: 1
   +-------------------------------------+-----------------------------------+
