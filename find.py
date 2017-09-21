@@ -7,16 +7,6 @@ from bugzilla.bug import Bug
 from prettytable import PrettyTable
 from textwrap import TextWrapper
 
-"""
-From email:
-
-
-* All BZs that have [RFE] in the summary
-* All BZs that were known issues in previous versions and are fixed in this
-  version
-* All BZs that remains known issues
-* All BZs that have a customer case attached
-"""
 
 bz = Bugzilla('bugzilla.redhat.com')
 if not bz.logged_in:
