@@ -27,10 +27,26 @@ To run this::
 
   ./find.py
 
-    OR
+You can also search for a specific targeted release::
 
   ./find.py 2.4
 
-    OR
+Or maybe this release does not yet have bugs in ``VERIFIED`` state, and you
+want to preview what is ``ON_QA``::
 
   ./find.py 2.4 ON_QA
+
+Sample output::
+
+  RFEs: 1
+  +-------------------------------------+-----------------------------------+
+  | url                                 | summary                           |
+  +-------------------------------------+-----------------------------------+
+  | https://bugzilla.redhat.com/1446338 | [Doc RFE] Add a new compatibility |
+  |                                     |   matrix of RHCS with various     |
+  |                                     |   products                        |
+  +-------------------------------------+-----------------------------------+
+
+  Customer Cases: ...
+
+  Fixed Known Issues: ...
