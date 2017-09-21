@@ -125,10 +125,10 @@ bugs = find_future_features()
 print('RFEs:')
 print_report(bugs)
 
-print('Customer Cases:')
 bugs = find_customer_cases()
+print('Customer Cases:')
 print_report(bugs)
 
-print('Fixed Known Issues:')
 bugs = find_fixed_known_issues()
+print('Fixed Known Issues:')
 print_report(bugs)
