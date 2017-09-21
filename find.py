@@ -122,13 +122,13 @@ def print_report(bugs):
 
 
 bugs = find_future_features()
-print('RFEs:')
+print('RFEs: %d' % len(bugs))
 print_report(bugs)
 
 bugs = find_customer_cases()
-print('Customer Cases:')
+print('Customer Cases: %d' % len(bugs))
 print_report(bugs)
 
 bugs = find_fixed_known_issues()
-print('Fixed Known Issues:')
+print('Fixed Known Issues: %d' % len(bugs))
 print_report(bugs)
