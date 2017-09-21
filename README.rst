@@ -27,6 +27,6 @@ To run this::
 
   ./find.py
 
-  OR
+    OR
 
   ./find.py 2.4
