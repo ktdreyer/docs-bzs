@@ -2,7 +2,7 @@ This script searches for BZs that are interesting to the RH Ceph Storage docs
 team.
 
 * All BZs that have [RFE] in the summary (BZ rules always add the
-``FutureFeature`` keyword here too.)
+  ``FutureFeature`` keyword here too.)
 * All BZs that were known issues in previous versions and are fixed in this
   version.
 * All BZs that have a customer case attached.
