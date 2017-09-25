@@ -24,7 +24,6 @@ except IndexError:
     STATUS = 'VERIFIED'
 
 
-
 def query_params(target_release=None):
     """ Return a dict of basic Bugzilla search parameters. """
     params = {
