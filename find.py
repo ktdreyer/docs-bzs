@@ -31,12 +31,15 @@ def query_params(target_release=None):
         'f1': 'product',
         'o1': 'equals',
         'v1': PRODUCT,
+        'f2': 'component',
+        'o2': 'notequals',
+        'v2': 'Documentation',
     }
     if target_release:
         params.update({
-            'f2': 'target_release',
-            'o2': 'equals',
-            'v2': target_release,
+            'f3': 'target_release',
+            'o3': 'equals',
+            'v3': target_release,
         })
     return params.copy()
 
@@ -55,12 +58,12 @@ def find_future_features(status):
     """ Find all verified bugs with FutureFeature keyword """
     payload = query_params(RELEASE)
     payload.update({
-        'f3': 'bug_status',
-        'o3': 'equals',
-        'v3': status,
-        'f4': 'keywords',
-        'o4': 'allwordssubstr',
-        'v4': 'FutureFeature',
+        'f4': 'bug_status',
+        'o4': 'equals',
+        'v4': status,
+        'f5': 'keywords',
+        'o5': 'allwordssubstr',
+        'v5': 'FutureFeature',
     })
     return search(payload)
 
@@ -69,12 +72,12 @@ def find_customer_cases(status):
     """ Find all verified bugs with a customer case attached """
     payload = query_params(RELEASE)
     payload.update({
-        'f3': 'bug_status',
-        'o3': 'equals',
-        'v3': status,
-        'f4': 'external_bugzilla.description',
+        'f4': 'bug_status',
         'o4': 'equals',
-        'v4': 'Red Hat Customer Portal',
+        'v4': status,
+        'f5': 'external_bugzilla.description',
+        'o5': 'equals',
+        'v5': 'Red Hat Customer Portal',
     })
     return search(payload)
 
@@ -83,12 +86,12 @@ def find_fixed_known_issues(status):
     """ Find all verified bugs marked as "Known Issue"  """
     payload = query_params(RELEASE)
     payload.update({
-        'f3': 'bug_status',
-        'o3': 'equals',
-        'v3': status,
-        'f4': 'cf_doc_type',
+        'f4': 'bug_status',
         'o4': 'equals',
-        'v4': 'Known Issue',
+        'v4': status,
+        'f5': 'cf_doc_type',
+        'o5': 'equals',
+        'v5': 'Known Issue',
     })
     return search(payload)
 
